@@ -70,7 +70,7 @@ class BaseConnectionHandler:
         delattr(self._connections, key)
 
     def __iter__(self):
-        return iter(self.settings)
+        return iter(self.settings.copy())
 
     def all(self):
         return [self[alias] for alias in self]
